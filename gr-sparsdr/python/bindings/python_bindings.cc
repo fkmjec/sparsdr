@@ -21,6 +21,13 @@ namespace py = pybind11;
 // Please do not delete
 /**************************************/
 // BINDING_FUNCTION_PROTOTYPES(
+void bind_combined_pluto_receiver(py::module& m);
+void bind_combined_usrp_receiver(py::module& m);
+void bind_compressing_pluto_source(py::module& m);
+void bind_compressing_usrp_source(py::module& m);
+void bind_reconstruct(py::module& m);
+void bind_simple_combined_pluto_receiver(py::module& m);
+void bind_simple_combined_usrp_receiver(py::module& m);
 // ) END BINDING_FUNCTION_PROTOTYPES
 
 
@@ -49,5 +56,12 @@ PYBIND11_MODULE(sparsdr_python, m)
     // Please do not delete
     /**************************************/
     // BINDING_FUNCTION_CALLS(
+    bind_combined_pluto_receiver(m);
+    bind_combined_usrp_receiver(m);
+    bind_compressing_pluto_source(m);
+    bind_compressing_usrp_source(m);
+    bind_reconstruct(m);
+    bind_simple_combined_pluto_receiver(m);
+    bind_simple_combined_usrp_receiver(m);
     // ) END BINDING_FUNCTION_CALLS
 }
